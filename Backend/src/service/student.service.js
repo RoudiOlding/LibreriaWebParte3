@@ -48,6 +48,10 @@ const getVisualiseStudentService = async (StudentId) =>{
         throw Error("Error while visualise Student: " + e);
     }
 };
+const getFavoriteStudentService = async (StudentId, FavoriteId) =>{
+    
+};
+
 
 //Todo lo que hace el alumno
 
