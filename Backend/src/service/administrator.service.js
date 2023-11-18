@@ -48,4 +48,8 @@ const getVisualiseAdministratorService = async (AdministratorId) =>{
         throw Error("Error while visualise Administrator: " + e);
     }
 };
-
+module.exports ={
+    getRegisterAdministratorService,
+    getUpdateAdministratorService,
+    getVisualiseAdministratorService,
+};
