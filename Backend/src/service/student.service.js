@@ -48,4 +48,9 @@ const getVisualiseStudentService = async (StudentId) =>{
         throw Error("Error while visualise Student: " + e);
     }
 };
+module.exports ={
+    getRegisterStudentService,
+    getUpdateStudentService,
+    getVisualiseStudentService,
+};
 
