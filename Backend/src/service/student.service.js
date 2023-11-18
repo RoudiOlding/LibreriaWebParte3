@@ -43,7 +43,7 @@ const getVisualiseStudentService = async (StudentId) =>{
                 id:StudentId,
             },
         });
-      return student
+      return student;
     }catch(e){
         throw Error("Error while visualise Student: " + e);
     }
