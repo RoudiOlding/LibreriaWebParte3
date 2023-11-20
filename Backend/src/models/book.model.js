@@ -5,7 +5,7 @@ module.exports = (sequelize, Sequelize) => {
         autoIncrement: true,
         primaryKey: true,
       },
-      qualification: {
+      namebook: {
         type: Sequelize.STRING,
       },
       author: {

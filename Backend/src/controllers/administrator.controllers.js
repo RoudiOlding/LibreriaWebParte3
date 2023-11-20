@@ -11,7 +11,7 @@ const getRegisterAdministrator = async (req,res) =>{
       result: result,
       message: "Succesfully Administrator Register",
     });
-  }; catch (e) {
+  } catch (e) {
     return res.status(400).json({ status: 400, message: e.message });
   }
 };
@@ -23,7 +23,7 @@ const getUpdateAdministrator = async (req,res) =>{
       result: result,
       message: "Succesfully Administrator Update",
     });
-  }; catch (e) {
+  } catch (e) {
     return res.status(400).json({ status: 400, message: e.message });
   }
 };
