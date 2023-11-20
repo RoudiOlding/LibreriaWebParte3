@@ -1,4 +1,38 @@
 const { Models } = require("../db.js");
+const bookModel = require("../models/book.model.js");
+
+const getBookAtributesService = async (BookID) =>{
+    try {
+        return await bookModel.findOne({
+            where:{BookID}
+        })
+        
+    } catch (error) {
+        console.error(error);
+        return null;
+    }
+}
+
+const updateBookAtributesService = async (libro) =>{
+    const {id} = libro;
+    try {
+        const result = await bookModel.update({where:{id}})
+        if (result){
+            result.set(libro);
+            result.save();
+        }
+
+        return result;
+    } catch (error) {
+        console.error(error);
+        return null;
+    }
+}
+
+module.exports ={
+    getBookAtributesService,
+    updateBookAtributesService
+}
 
 //Todo lo que hace el libro
 /*
