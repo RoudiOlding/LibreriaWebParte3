@@ -37,7 +37,7 @@ module.exports = (sequelize, Sequelize) => {
       },
       availability: {
         type: Sequelize.BOOLEAN,
-        defaultValue: true,
+        defaultValue: false,
       },
       cont: {
         type: Sequelize.INTEGER,
