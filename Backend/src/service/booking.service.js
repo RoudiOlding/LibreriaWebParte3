@@ -1,6 +1,18 @@
 const { Models } = require("../db.js");
 
-const getBookingService = async(body) =>{
+const getVisualizeBookingService = async(StudentId) =>{
+    try{
+        const booking = await Models.Booking.findAnll({
+            attributes=["namebook","isbn","editor","autor","foto"],
+            where:{
+                StudentId:StudentId,
+            },
+        });
+    }catch(e){
+        throw Error("Error while visualize Student Booking: " + e);
+    }
+};
+const getUpdateBookingService = async(body) =>{
     try{
         const booking = await Models.Booking.findOne({
             where:{
