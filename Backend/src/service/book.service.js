@@ -28,7 +28,21 @@ const updateBookAtributesService = async (libro) =>{
         return null;
     }
 }
-
+const updateBookingBookService = async (BookId) =>{
+  try{
+      const book = await Models.Book.findOne({
+          where:{
+              BookId:BookId,
+              availability:false,
+          },
+      });
+      await book.update({
+          availability: true,
+          cont: cont + 1,
+      })
+  }catch(e){
+    throw Error("Error while update Booking book: " + e);  }  
+};
 module.exports ={
     getBookAtributesService,
     updateBookAtributesService
