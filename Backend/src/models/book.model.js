@@ -39,6 +39,10 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.BOOLEAN,
         defaultValue: true,
       },
+      cont: {
+        type: Sequelize.INTEGER,
+      },
+    
     });
   
     return Book;
