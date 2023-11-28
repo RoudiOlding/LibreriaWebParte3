@@ -20,7 +20,7 @@ const server = () =>{
   };
   const { db } = require("./db");
   db.sequelize
-    .sync({ alter: false })
+    .sync({ force: false })
     .catch((err) => {
       console.log("Failed to sync db: " + err.message);
     });
