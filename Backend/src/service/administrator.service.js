@@ -38,7 +38,7 @@ const getUpdateAdministratorService = async (body) =>{
 const getVisualiseAdministratorService = async (AdministratorId) =>{
     try{
         const administrator = await Models.Administrator.findOne({
-            attributes: ["name","lastName","email","password","identityDoc","photo"]
+            attributes: ["name","lastName","email","password","identityDoc","photo"],
             where:{
                 id:AdministratorId,
             },

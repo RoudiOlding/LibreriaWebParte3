@@ -13,6 +13,15 @@ const getBookAtributesService = async (BookID) =>{
     }
 }
 
+const getAllBookService = async() =>{
+    try {
+        return await bookModel.findAll()
+    } catch (error) {
+        console.error(error);
+        return null
+    }
+}
+
 const updateBookAtributesService = async (libro) =>{
     const {id} = libro;
     try {
@@ -45,7 +54,9 @@ const updateBookingBookService = async (BookId) =>{
 };
 module.exports ={
     getBookAtributesService,
-    updateBookAtributesService
+    updateBookAtributesService,
+    updateBookingBookService,
+    getAllBookService
 }
 
 //Todo lo que hace el libro

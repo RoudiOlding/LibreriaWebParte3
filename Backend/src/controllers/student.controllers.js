@@ -11,7 +11,7 @@ const getRegisterStudent = async (req,res) =>{
       result: result,
       message: "Succesfully Student Register",
     });
-  }; catch (e) {
+  }catch (e) {
     return res.status(400).json({ status: 400, message: e.message });
   }
 };
@@ -23,7 +23,7 @@ const getUpdateStudent = async (req,res) =>{
       result: result,
       message: "Succesfully Student Update",
     });
-  }; catch (e) {
+  } catch (e) {
     return res.status(400).json({ status: 400, message: e.message });
   }
 };

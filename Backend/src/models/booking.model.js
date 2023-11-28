@@ -5,6 +5,9 @@ module.exports = (sequelize, Sequelize) => {
         autoIncrement: true,
         primaryKey: true,
       },
+      StudentId:{
+
+      },
       startDate: {
         type: Sequelize.DATE,
         allowNull: false,

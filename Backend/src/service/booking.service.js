@@ -2,8 +2,8 @@ const { Models } = require("../db.js");
 
 const getVisualizeBookingService = async(StudentId) =>{
     try{
-        const booking = await Models.Booking.findAnll({
-            attributes=["namebook","isbn","editor","autor","foto"],
+        const booking = await Models.Booking.findAll({
+            attributes:["namebook","isbn","editor","autor","foto"],
             where:{
                 StudentId:StudentId,
             },
@@ -29,6 +29,10 @@ const getUpdateBookingService = async(body) =>{
         throw Error("Error while update Booking: " + e);
     }
 };
+
+const service ={getUpdateBookingService,getVisualizeBookingService}
+
+export default service
 //Todo lo que hace la reserva
 
 /*
