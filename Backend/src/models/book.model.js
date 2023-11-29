@@ -18,7 +18,7 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.STRING,
       },
       anio: {
-        type: Sequelize.Date,
+        type: Sequelize.DATE,
       },
       language: {
         type: Sequelize.STRING,

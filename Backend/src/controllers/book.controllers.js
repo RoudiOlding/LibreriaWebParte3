@@ -1,9 +1,8 @@
-import 
+const
 { getBookAtributesService,
 updateBookAtributesService,
 updateBookingBookService,
-getAllBookService } 
-from "../service/book.service.js";
+getAllBookService } = require("../service/book.service.js")
 
 const getAllBook =async (req,res)=>{
     const libros = await getAllBookService()
@@ -39,4 +38,4 @@ const updateStatusBooking = async(req,res)=>{
         return res.status(500).json ({message:"No encontrado"})
 }
 
-export default {getAllBook,getBookAtribute,updateBookAtributes,updateStatusBooking};
+module.exports= {getAllBook,getBookAtribute,updateBookAtributes,updateStatusBooking};

@@ -1,5 +1,5 @@
-import {getVisualizeBookingService,getUpdateBookingService} 
-from '../service/booking.service,js'
+const {getVisualizeBookingService,getUpdateBookingService} 
+= require("../service/booking.service.js")
 
 const getVisualizeBooking = async (req,res)=>{
     const id = req.params.id
@@ -20,4 +20,4 @@ const updateBooking = async (req,res) =>{
         return res.status(500).json({message:"No encontrado"})
 }
 
-export default {updateBooking,getVisualizeBooking}
+module.exports = {updateBooking,getVisualizeBooking}

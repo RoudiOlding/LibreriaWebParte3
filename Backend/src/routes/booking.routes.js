@@ -1,9 +1,9 @@
 const Router = require ("express")
 
-import
+const
 {updateBooking,
 getVisualizeBooking}
-from '../controllers/booking.constroller.js'
+= require ('../controllers/booking.constroller.js')
 
 const bookingRouter = Router()
 

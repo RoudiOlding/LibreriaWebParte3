@@ -1,7 +1,7 @@
 const express = require("express");
 const servConfig = require("./config/server-config.js");
-const administratorRouter  = require("./routes/administrator .routes");
-const studentRouter  = require("./routes/student.routes");
+const administratorRouter  = require("./routes/administrator.routes.js");
+const studentRouter  = require("./routes/student.routes.js");
 const bookRouter = require ("./routes/book.routes.js");
 const bookingRouter =require("./routes/booking.routes.js");
 const favoriteRouter = require("./routes/favorite.routes.js")

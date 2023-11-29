@@ -1,6 +1,6 @@
 const Router = require("express");
 
-import control from "../controllers/favorite.controllers";
+const control = require("../controllers/favorite.controllers")
 
 const favoriteRouter = Router();
 

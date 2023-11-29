@@ -38,7 +38,7 @@ const getUpdateStudentService = async (body) =>{
 const getVisualiseStudentService = async (StudentId) =>{
     try{
         const student = await Models.Student.findOne({
-            attributes: ["name","lastName","email","password","identityDoc","photo"]
+            attributes: ["name","lastName","email","password","identityDoc","photo"],
             where:{
                 id:StudentId,
             },

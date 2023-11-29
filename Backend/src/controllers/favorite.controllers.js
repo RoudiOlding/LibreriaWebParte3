@@ -1,4 +1,4 @@
-import service from "../service/favorite.service";
+const service = require ("../service/booking.service.js")
 
 const createFavorite = async (req,res)=>{
     const entry = req.body;
@@ -31,4 +31,4 @@ const removeLibro = async (req,res)=>{
 
 const control = {createFavorite,getFavoriteList,removeLibro}
 
-export default control
+module.exports = control;

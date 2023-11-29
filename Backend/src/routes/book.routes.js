@@ -1,11 +1,11 @@
-const Router = requiere("express");
+const Router = require("express");
 
-import 
+const
 {getAllBook,
 getBookAtribute,
 updateBookAtributes,
 updateStatusBooking}
-from  '../controllers/book.controllers.js'
+= require  ('../controllers/book.controllers.js')
 
 const bookRouter = Router();
 
