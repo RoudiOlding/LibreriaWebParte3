@@ -5,13 +5,11 @@ module.exports = (sequelize, Sequelize) => {
         autoIncrement: true,
         primaryKey: true,
       },
+
       state: {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
       },
-      tipo:{
-        type: Sequelize.String,
-      }
   
     });
     return Favorite;

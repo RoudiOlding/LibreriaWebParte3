@@ -8,7 +8,7 @@ const favoriteRouter = require("./routes/favorite.routes.js")
 
 const server = () =>{
   const app = express();
-  app.use(serverConfig);
+  app.use(servConfig);
   app.use(administratorRouter);
   app.use(studentRouter);
   app.use(bookRouter);

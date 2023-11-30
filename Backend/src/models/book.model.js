@@ -5,7 +5,7 @@ module.exports = (sequelize, Sequelize) => {
         autoIncrement: true,
         primaryKey: true,
       },
-      namebook: {
+      qualification: {
         type: Sequelize.STRING,
       },
       author: {
@@ -19,6 +19,7 @@ module.exports = (sequelize, Sequelize) => {
       },
       anio: {
         type: Sequelize.DATE,
+        allowNull: false,
       },
       language: {
         type: Sequelize.STRING,
@@ -37,12 +38,8 @@ module.exports = (sequelize, Sequelize) => {
       },
       availability: {
         type: Sequelize.BOOLEAN,
-        defaultValue: false,
+        defaultValue: true,
       },
-      cont: {
-        type: Sequelize.INTEGER,
-      },
-    
     });
   
     return Book;

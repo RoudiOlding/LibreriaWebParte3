@@ -1,9 +1,9 @@
 const Router = require ("express")
 
-const
-{updateBooking,
-getVisualizeBooking}
-= require ('../controllers/booking.constroller.js')
+const{ 
+    updateBooking,
+getVisualizeBooking,
+} = require ('../controllers/booking.controllers.js')
 
 const bookingRouter = Router()
 

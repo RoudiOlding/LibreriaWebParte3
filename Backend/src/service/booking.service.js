@@ -30,14 +30,7 @@ const getUpdateBookingService = async(body) =>{
     }
 };
 
-const service ={getUpdateBookingService,getVisualizeBookingService}
-
-export default service
-//Todo lo que hace la reserva
-
-/*
-    Acciones & Atributos:
-        1. Reservar un libro
-            a. Cambia el estado del libre, de "True" a "False" su estado
-            b. Incrementa el "Prestado" en 1
-*/
+module.exports ={
+    getUpdateBookingService,
+    getVisualizeBookingService,
+}
