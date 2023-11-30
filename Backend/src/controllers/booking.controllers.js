@@ -20,4 +20,4 @@ const updateBooking = async (req,res) =>{
         return res.status(500).json({message:"No encontrado"})
 }
 
-module.exports = {updateBooking,getVisualizeBooking};
+module.exports = {updateBooking,getVisualizeBooking}
