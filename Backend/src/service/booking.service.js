@@ -3,10 +3,12 @@ const { Models } = require("../db.js");
 const getVisualizeBookingService = async(StudentId) =>{
     try{
         const booking = await Models.Booking.findAll({
+            attributes:['BookId','StudentId'],
             where:{
                 StudentId:StudentId
             },
         });
+        return booking; 
     }catch(e){
         throw Error("Error while visualize Student Booking: " + e);
     }
@@ -14,6 +16,7 @@ const getVisualizeBookingService = async(StudentId) =>{
 const getUpdateBookingService = async(body) =>{
     try{
         const booking = await Models.Booking.findOne({
+            
             where:{
                 id:BookingId,
             },
@@ -29,7 +32,22 @@ const getUpdateBookingService = async(body) =>{
     }
 };
 
+const getLastBookingsService =async() =>{
+    try {
+        const lastBookings = await Models.Booking.findAll({
+            order:[
+                ['createdAt', 'DESC'],
+            ],
+            limit: 2
+        });
+        return lastBookings
+    } catch (error) {
+        throw Error("Error while getting last Bookings: " + e);
+    }
+}
+
 module.exports ={
     getUpdateBookingService,
     getVisualizeBookingService,
+    getLastBookingsService,
 }
