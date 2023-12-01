@@ -5,18 +5,18 @@ const control = require("../controllers/favorite.controllers")
 const favoriteRouter = Router();
 
 favoriteRouter.get(
-    "api/student/getFavoriteList/:id",
+    "/api/student/getFavoriteList/:id",
     control.getFavoriteList
 )
 
 
 favoriteRouter.delete(
-    "api/student/removeLibro/:id",
+    "/api/student/removeLibro/:id",
     control.removeLibro
 )
 
 favoriteRouter.post(
-    "api/student/createFavorite",
+    "/api/student/createFavorite",
     control.createFavorite
 )
 

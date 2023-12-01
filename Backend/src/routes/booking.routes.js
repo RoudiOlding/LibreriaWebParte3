@@ -1,19 +1,19 @@
 const Router = require ("express")
 
-const{ 
-    updateBooking,
-getVisualizeBooking,
-} = require ('../controllers/booking.controllers.js')
+const
+{updateBooking,
+getVisualizeBooking}
+= require ('../controllers/booking.constroller.js')
 
 const bookingRouter = Router()
 
 bookingRouter.get(
-    "api/student/getVisualizeBooking/:id",
+    "/api/student/getVisualizeBooking/:id",
     getVisualizeBooking
 )
 
 bookingRouter.post(
-    "api/student/updateBooking/:id",
+    "/api/student/updateBooking/:id",
     updateBooking
 )
 
