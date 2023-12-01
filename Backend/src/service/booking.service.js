@@ -3,7 +3,6 @@ const { Models } = require("../db.js");
 const getVisualizeBookingService = async(StudentId) =>{
     try{
         const booking = await Models.Booking.findAll({
-            attributes:["namebook","isbn","editor","autor","foto"],
             where:{
                 StudentId:StudentId
             },
