@@ -29,7 +29,22 @@ const getUpdateBookingService = async(body) =>{
     }
 };
 
+const getLastBookingsService =async() =>{
+    try {
+        const lastBookings = await Models.Booking.findAll({
+            order:[
+                ['createdAt', 'DESC'],
+            ],
+            limit: 2
+        });
+        return lastBookings
+    } catch (error) {
+        throw Error("Error while getting last Bookings: " + e);
+    }
+}
+
 module.exports ={
     getUpdateBookingService,
     getVisualizeBookingService,
+    getLastBookingsService,
 }

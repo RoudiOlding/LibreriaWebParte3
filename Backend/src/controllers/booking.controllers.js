@@ -1,4 +1,4 @@
-const {getVisualizeBookingService,getUpdateBookingService} 
+const {getVisualizeBookingService,getUpdateBookingService, getLastBookingsService} 
 = require("../service/booking.service.js")
 
 const getVisualizeBooking = async (req,res)=>{
@@ -20,4 +20,13 @@ const updateBooking = async (req,res) =>{
         return res.status(500).json({message:"No encontrado"})
 }
 
-module.exports = {updateBooking,getVisualizeBooking}
+const getLastBookings = async (req,res) =>{
+    const result = await getLastBookingsService()
+
+    if (result)
+        return res.status(200).json(result)
+    else
+        return res.status(500).json({message:"No encontrado"})
+}
+
+module.exports = {updateBooking,getVisualizeBooking,getLastBookings}

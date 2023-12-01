@@ -1,7 +1,7 @@
 module.exports = {
     HOST: "localhost",
     USER: "postgres",
-    PASSWORD: "1234", 
-    DB: "ProgWebDB",
+    PASSWORD: "andre", 
+    DB: "andreDB",
     DIALECT: "postgres",
   };
