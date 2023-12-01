@@ -1,5 +1,25 @@
 const { Models } = require("../db.js");
 
+const getRegisterBookService = async (body) =>{
+    try{
+        const book = await Models.Book.create({
+            qualification:body.qualification,
+            author:body.author,
+            editorial:body.editorial,
+            category:body.category,
+            anio:body.anio,
+            language:body.language,
+            nropages:body.nropages,
+            binding:body.binding,
+            isbn13:body.isbn13,
+            photobook:body.photobook,
+            availability:body.availability,
+        });
+        return book;
+    }catch(e){
+        throw Error("Error while creating Student: " + e);
+    }
+}
 const getBookAtributesService = async (BookID) =>{
     try {
         return await Models.Book.findOne({
@@ -52,6 +72,7 @@ const updateBookingBookService = async (BookId) =>{
     throw Error("Error while update Booking book: " + e);  }  
 };
 module.exports ={
+    getRegisterBookService,
     getBookAtributesService,
     updateBookAtributesService,
     updateBookingBookService,

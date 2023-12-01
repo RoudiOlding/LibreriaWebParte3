@@ -1,14 +1,18 @@
 const Router = require("express");
 
 const
-{getAllBook,
+{getRegisterBook,
+getAllBook,
 getBookAtribute,
 updateBookAtributes,
 updateStatusBooking}
 = require  ('../controllers/book.controllers.js')
 
 const bookRouter = Router();
-
+bookRouter.post(
+    '/api/student/getRegisterBook',
+    getRegisterBook
+);
 bookRouter.get(
     '/api/student/getAllBook',
     getAllBook

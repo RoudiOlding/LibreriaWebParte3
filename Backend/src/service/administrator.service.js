@@ -10,7 +10,7 @@ const getRegisterAdministratorService = async (body) =>{
             identityDoc:body.identityDoc,
             photo:body.photo,
         });
-        return student;
+        return administrator;
     }catch(e){
         throw Error("Error while creating Administrator: " + e);
     }

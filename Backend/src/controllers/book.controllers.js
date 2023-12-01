@@ -1,15 +1,27 @@
-const
-{ getBookAtributesService,
-updateBookAtributesService,
-updateBookingBookService,
-getAllBookService } = require("../service/book.service.js")
+const{
+    getRegisterBookService, 
+    getBookAtributesService,
+    updateBookAtributesService,
+    updateBookingBookService,
+    getAllBookService 
+} = require("../service/book.service.js")
 
-const getAllBook =async (req,res)=>{
+const getRegisterBook = async (req,res) =>{
+    try{
+      const result = await getRegisterBookService(req.body);
+      return res.status(200).json({
+        status: 200,
+        result: result,
+        message: "Succesfully Book Register",
+      });
+    }catch (e) {
+      return res.status(400).json({ status: 400, message: e.message });
+    }
+  };
+const getAllBook = async (req, res)=>{
     const libros = await getAllBookService()
     return res.status(200).json(libros)
 }
-
-
 
 const getBookAtribute = async (req, res)=>{
     const id = req.params.id;
@@ -38,4 +50,5 @@ const updateStatusBooking = async(req,res)=>{
         return res.status(500).json ({message:"No encontrado"})
 }
 
-module.exports= {getAllBook,getBookAtribute,updateBookAtributes,updateStatusBooking};
+module.exports= {
+    getRegisterBook,getAllBook,getBookAtribute,updateBookAtributes,updateStatusBooking};
