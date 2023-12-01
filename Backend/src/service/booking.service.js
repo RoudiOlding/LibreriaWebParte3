@@ -5,7 +5,7 @@ const getVisualizeBookingService = async(StudentId) =>{
         const booking = await Models.Booking.findAll({
             attributes:["namebook","isbn","editor","autor","foto"],
             where:{
-                StudentId:StudentId,
+                StudentId:StudentId
             },
         });
     }catch(e){

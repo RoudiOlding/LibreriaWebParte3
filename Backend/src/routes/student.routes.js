@@ -16,7 +16,7 @@ studentRouter.put(
   getUpdateStudent
 );
 studentRouter.get(
-  "/api/student/getVisualiseStudent",
+  "/api/student/getVisualiseStudent/:id",
   getVisualiseStudent
 );
 module.exports = studentRouter;

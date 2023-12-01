@@ -8,12 +8,12 @@ getVisualizeBooking}
 const bookingRouter = Router()
 
 bookingRouter.get(
-    "api/student/getVisualizeBooking",
+    "api/student/getVisualizeBooking/:id",
     getVisualizeBooking
 )
 
 bookingRouter.post(
-    "api/student/updateBooking",
+    "api/student/updateBooking/:id",
     updateBooking
 )
 
