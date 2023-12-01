@@ -1,9 +1,28 @@
 const { Models } = require("../db.js");
-const bookModel = require("../models/book.model.js");
 
+const getRegisterBookService = async (body) =>{
+    try{
+        const book = await Models.Book.create({
+            qualification:body.qualification,
+            author:body.author,
+            editorial:body.editorial,
+            category:body.category,
+            anio:body.anio,
+            language:body.language,
+            nropages:body.nropages,
+            binding:body.binding,
+            isbn13:body.isbn13,
+            photobook:body.photobook,
+            availability:body.availability,
+        });
+        return book;
+    }catch(e){
+        throw Error("Error while creating Student: " + e);
+    }
+}
 const getBookAtributesService = async (BookID) =>{
     try {
-        return await bookModel.findOne({
+        return await Models.Book.findOne({
             where:{BookID}
         })
         
@@ -15,7 +34,7 @@ const getBookAtributesService = async (BookID) =>{
 
 const getAllBookService = async() =>{
     try {
-        return await bookModel.findAll()
+        return await Models.Book.findAll()
     } catch (error) {
         console.error(error);
         return null
@@ -25,7 +44,7 @@ const getAllBookService = async() =>{
 const updateBookAtributesService = async (libro) =>{
     const {id} = libro;
     try {
-        const result = await bookModel.update({where:{id}})
+        const result = await Models.Book.update({where:{id}})
         if (result){
             result.set(libro);
             result.save();
@@ -53,17 +72,9 @@ const updateBookingBookService = async (BookId) =>{
     throw Error("Error while update Booking book: " + e);  }  
 };
 module.exports ={
+    getRegisterBookService,
     getBookAtributesService,
     updateBookAtributesService,
     updateBookingBookService,
     getAllBookService
 }
-
-//Todo lo que hace el libro
-/*
-    Acciones & Atributos:
-        1. Mostrar sus atributos
-            a. Todos los atributos de un libro
-        2. Cambiar sus atributos:
-            a. Le pueden cambiar todos sus atributos
-*/
