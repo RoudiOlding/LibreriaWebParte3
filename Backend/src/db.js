@@ -35,4 +35,4 @@ Models.Student=Student;
 
 // Procedimientos almacenados
 
-module.exports = { db, Models };
+module.exports = { db, Models,sequelize };

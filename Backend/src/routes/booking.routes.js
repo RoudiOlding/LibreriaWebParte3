@@ -3,7 +3,8 @@ const Router = require ("express")
 const
 {updateBooking,
 getVisualizeBooking,
-getLastBookings}
+getLastBookings,
+getMostRequestedBooks}
 = require ('../controllers/booking.controllers.js')
 
 const bookingRouter = Router()
@@ -22,4 +23,10 @@ bookingRouter.get(
     "/api/student/getLastBookings",
     getLastBookings
 )
+
+bookingRouter.get(
+    "/api/student/getMostRequestedBooks",
+    getMostRequestedBooks
+)
+
 module.exports= bookingRouter;

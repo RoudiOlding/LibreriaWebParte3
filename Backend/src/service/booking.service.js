@@ -1,4 +1,4 @@
-const { Models } = require("../db.js");
+const { Models,Sequelize } = require("../db.js");
 
 const getVisualizeBookingService = async(StudentId) =>{
     try{
@@ -27,8 +27,8 @@ const getUpdateBookingService = async(body) =>{
             StudentId:body.StudentId,
             BookId:body.BookId,
         });
-    }catch(e){
-        throw Error("Error while update Booking: " + e);
+    }catch(error){
+        throw Error("Error while update Booking: " + error);
     }
 };
 
@@ -41,13 +41,28 @@ const getLastBookingsService =async() =>{
             limit: 2
         });
         return lastBookings
-    } catch (error) {
-        throw Error("Error while getting last Bookings: " + e);
+    } catch(error) {
+        throw Error("Error while getting last Bookings: " + error);
     }
-}
+};
+
+const getMostRequestedBooksService =async() =>{
+    try {
+        const mostRequestedBooks = await Models.Booking.findAll({
+            attributes: ['bookId', [Models.Sequelize.fn('COUNT', 'bookId'), 'requestCount']],
+            group: ['bookId'],
+            order: [[Models.Sequelize.literal('requestCount'), 'DESC']],
+            limit: 2
+        });
+        return mostRequestedBooks
+    } catch(error) {
+        throw Error("Error while getting most requested Bookings: " + error);
+    }
+};
 
 module.exports ={
     getUpdateBookingService,
     getVisualizeBookingService,
     getLastBookingsService,
+    getMostRequestedBooksService,
 }
