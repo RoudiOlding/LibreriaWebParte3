@@ -3,7 +3,8 @@ const{
     getBookAtributesService,
     updateBookAtributesService,
     updateBookingBookService,
-    getAllBookService 
+    getAllBookService,
+    getMostRequestedBooksService
 } = require("../service/book.service.js")
 
 const getRegisterBook = async (req,res) =>{
@@ -49,6 +50,13 @@ const updateStatusBooking = async(req,res)=>{
     } else 
         return res.status(500).json ({message:"No encontrado"})
 }
+const getMostRequestedBooks = async (req,res)=>{
+    const resutl = await getMostRequestedBooksService();
+    if (resutl)
+        return res.status(200).json(resutl)
+    else 
+    return res.status(500).json({message:"No encontrado"})
+}
 
 module.exports= {
-    getRegisterBook,getAllBook,getBookAtribute,updateBookAtributes,updateStatusBooking};
+    getRegisterBook,getAllBook,getBookAtribute,updateBookAtributes,updateStatusBooking,getMostRequestedBooks};

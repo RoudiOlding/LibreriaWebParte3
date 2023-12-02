@@ -5,7 +5,8 @@ const
 getAllBook,
 getBookAtribute,
 updateBookAtributes,
-updateStatusBooking}
+updateStatusBooking,
+getMostRequestedBooks}
 = require  ('../controllers/book.controllers.js')
 
 const bookRouter = Router();
@@ -28,6 +29,10 @@ bookRouter.put(
 bookRouter.put(
     '/api/student/updateStatusBooking/:id',
     updateStatusBooking
+)
+bookRouter.get(
+    '/api/student/getMostRequestedBoks',
+    getMostRequestedBooks
 )
 
 module.exports=bookRouter;

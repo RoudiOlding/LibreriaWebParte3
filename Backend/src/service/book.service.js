@@ -71,10 +71,25 @@ const updateBookingBookService = async (BookId) =>{
   }catch(e){
     throw Error("Error while update Booking book: " + e);  }  
 };
+
+const getMostRequestedBooksService =async() =>{
+    try {
+        const mostRequestedBooks = await Models.Book.findAll(
+            {
+               order:[[cont],[DESC]] 
+            }
+        )
+            
+        return mostRequestedBooks
+    } catch(error) {
+        throw Error("Error while getting most requested Bookings: " + error);
+    }
+};
 module.exports ={
     getRegisterBookService,
     getBookAtributesService,
     updateBookAtributesService,
     updateBookingBookService,
-    getAllBookService
+    getAllBookService,
+    getMostRequestedBooksService
 }
