@@ -79,7 +79,7 @@ const getMostRequestedBooksService =async() =>{
     try {
         const mostRequestedBooks = await Models.Book.findAll(
             {
-               order:['cont','DESC'] 
+               order:[['cont','DESC']] 
             }
         )
             
