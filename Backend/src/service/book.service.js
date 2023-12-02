@@ -14,6 +14,9 @@ const getRegisterBookService = async (body) =>{
             isbn13:body.isbn13,
             photobook:body.photobook,
             availability:body.availability,
+            title:body.title,
+            cont:body.cont,
+            ReturnDate:body.ReturnDate,
         });
         return book;
     }catch(e){
