@@ -6,18 +6,20 @@ async function seedBook() {
   
       books.map((book, id) => {
         const body = {
-          id: id,
+          id:id,
           qualification:book.formato,
           author:book.autor,
           editorial:book.editorial,
           category:book.categoria,
           anio:book.anio,
           language:book.idioma,
-          nropages:book["nro-paginas"],
+          nropages:book.nPaginas,
           binding:book.encuadernacion,
           isbn13:book.ISBN13,
-          photobook:book["imagen-portada-url"],
-          availability:book.disponibilidad,
+          photobook:book.FotoLibro,
+          title:book.titulo,
+          cont: book.pedidos,
+          ReturnDate: book.FechaDevolucion,
         };
         registerBookService(body)
           .then((result) => {

@@ -14,6 +14,9 @@ const getRegisterBookService = async (body) =>{
             isbn13:body.isbn13,
             photobook:body.photobook,
             availability:body.availability,
+            title:body.title,
+            cont:body.cont,
+            ReturnDate:body.ReturnDate,
         });
         return book;
     }catch(e){
@@ -71,10 +74,25 @@ const updateBookingBookService = async (BookId) =>{
   }catch(e){
     throw Error("Error while update Booking book: " + e);  }  
 };
+
+const getMostRequestedBooksService =async() =>{
+    try {
+        const mostRequestedBooks = await Models.Book.findAll(
+            {
+               order:[[cont],[DESC]] 
+            }
+        )
+            
+        return mostRequestedBooks
+    } catch(error) {
+        throw Error("Error while getting most requested Bookings: " + error);
+    }
+};
 module.exports ={
     getRegisterBookService,
     getBookAtributesService,
     updateBookAtributesService,
     updateBookingBookService,
-    getAllBookService
+    getAllBookService,
+    getMostRequestedBooksService
 }

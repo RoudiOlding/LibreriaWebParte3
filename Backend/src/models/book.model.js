@@ -1,3 +1,5 @@
+const { INTEGER } = require("sequelize");
+
 module.exports = (sequelize, Sequelize) => {
     const Book = sequelize.define("Book", {
       id: {
@@ -39,6 +41,12 @@ module.exports = (sequelize, Sequelize) => {
       availability: {
         type: Sequelize.BOOLEAN,
         defaultValue: true,
+      },
+      cont: {
+        type: Sequelize.INTEGER,
+      },
+      ReturnDate: {
+        type: Sequelize.INTEGER,
       },
     });
   
