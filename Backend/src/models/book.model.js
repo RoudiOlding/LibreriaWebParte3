@@ -42,10 +42,12 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.BOOLEAN,
         defaultValue: true,
       },
-      cont:{
+      cont: {
         type: Sequelize.INTEGER,
-        defaultValue: 0,
-        }
+      },
+      ReturnDate: {
+        type: Sequelize.INTEGER,
+      },
     });
   
     return Book;
