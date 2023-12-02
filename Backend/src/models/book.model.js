@@ -7,6 +7,9 @@ module.exports = (sequelize, Sequelize) => {
         autoIncrement: true,
         primaryKey: true,
       },
+      titulo:{
+        type: Sequelize.STRING,
+      },
       qualification: {
         type: Sequelize.STRING,
       },
