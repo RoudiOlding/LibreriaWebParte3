@@ -12,7 +12,7 @@ const books = [
         "FotoLibro": "https://images.cdn2.buscalibre.com/fit-in/180x180/1f/a6/1fa666e0f93fb0bc63c4c214188f3a46.jpg",
         "nPaginas": "104",
         "pedidos": "0",
-        "FechaDevolucion": "0",
+        "FechaDevolucion": "2023-12-02T12:19:49.451Z",
     },
     {
         "formato": "Libro f\u00edsico",
@@ -27,7 +27,7 @@ const books = [
         "FotoLibro": "https://images.cdn1.buscalibre.com/fit-in/180x180/20/82/2082a4e5a59dcf7e8531feb8e488c30b.jpg",
         "nPaginas": "128",
         "pedidos": "0",
-        "FechaDevolucion": " ",
+        "FechaDevolucion": "2023-12-02T12:19:49.451Z",
     },
     {
         "formato": "Libro f\u00edsico",
@@ -42,7 +42,7 @@ const books = [
         "FotoLibro": "https://images.cdn3.buscalibre.com/fit-in/180x180/a0/b2/a0b2c729a04d61a9348942dff8dbaa39.jpg",
         "nPaginas": "214",
         "pedidos": "0",
-        "FechaDevolucion": "0",
+        "FechaDevolucion": "2023-12-02T12:19:49.451Z",
     },
     {
         "formato": "Libro f\u00edsico",
@@ -57,7 +57,7 @@ const books = [
         "FotoLibro": "https://images.cdn3.buscalibre.com/fit-in/180x180/f8/78/f878362b2a6c71f5e7125eafff09a82c.jpg",
         "nPaginas": "792",
         "pedidos": "0",
-        "FechaDevolucion": "0",
+        "FechaDevolucion": "2023-12-02T12:19:49.451Z",
     },
     {
         "formato": "Libro f\u00edsico",
@@ -72,7 +72,7 @@ const books = [
         "FotoLibro": "https://images.cdn1.buscalibre.com/fit-in/180x180/b2/4f/b24f5a1c7adddcc154ad324483235c72.jpg",
         "nPaginas": "368",
         "pedidos": "0",
-        "FechaDevolucion": "0",
+        "FechaDevolucion": "2023-12-02T12:19:49.451Z",
     },
     {
         "formato": "Libro f\u00edsico",
@@ -87,7 +87,7 @@ const books = [
         "FotoLibro": "https://images.cdn1.buscalibre.com/fit-in/180x180/98/f8/98f851577377e72513d555512f55617f.jpg",
         "nPaginas": "348",
         "pedidos": "0",
-        "FechaDevolucion": "0",
+        "FechaDevolucion": "2023-12-02T12:19:49.451Z",
     },
     {
         "formato": "Libro f\u00edsico",
@@ -102,7 +102,7 @@ const books = [
         "FotoLibro": "https://images.cdn1.buscalibre.com/fit-in/180x180/ef/e8/efe821552b8ec7f23174fbfff1755870.jpg",
         "nPaginas": "100",
         "pedidos": "0",
-        "FechaDevolucion": "0",
+        "FechaDevolucion": "2023-12-02T12:19:49.451Z",
     },
     {
         "formato": "Libro f\u00edsico",
@@ -117,13 +117,13 @@ const books = [
         "FotoLibro": "https://images.cdn1.buscalibre.com/fit-in/180x180/46/f2/46f283d23180e936bb251655dbc699ae.jpg",
         "nPaginas": "120",
         "pedidos": "0",
-        "FechaDevolucion": "0",
+        "FechaDevolucion": "2023-12-02T12:19:49.451Z",
     },
     {
         "formato": "Libro f\u00edsico",
         "autor": "Joyce dunbar",
         "editorial": "Edebe",
-	"categoria": "Literatura inglesa",
+	    "categoria": "Literatura inglesa",
         "anio": "2004",
         "idioma": "Espa\u00f1ol",
         "encuadernacion": "Tapa blanda",
@@ -132,7 +132,7 @@ const books = [
         "FotoLibro": "https://images.cdn3.buscalibre.com/fit-in/180x180/21/6f/216f45ed6c90bd079941db392d9f9a3a.jpg",
         "nPaginas": "186",
         "pedidos": "0",
-        "FechaDevolucion": "0",
+        "FechaDevolucion": "2023-12-02T12:19:49.451Z",
     },
     {
         "formato": "Libro f\u00edsico",
@@ -147,7 +147,7 @@ const books = [
         "FotoLibro": "https://images.cdn2.buscalibre.com/fit-in/180x180/5c/25/5c2576ff6c47d96229b0123281eabcf7.jpg",
         "nPaginas": "176",
         "pedidos": "0",
-        "FechaDevolucion": "0",
+        "FechaDevolucion": "2023-12-02T12:19:49.451Z",
     }
 ];
 module.exports = books;

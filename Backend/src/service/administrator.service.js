@@ -9,6 +9,9 @@ const getRegisterAdministratorService = async (body) =>{
             password:body.password,
             identityDoc:body.identityDoc,
             photo:body.photo,
+            language:body.language,
+            prefix:body.prefix,
+            colorfavorite:body.colorfavorite,
         });
         return administrator;
     }catch(e){

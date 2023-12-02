@@ -15,8 +15,13 @@ administratorRouter.put(
   "/api/student/getUpdateAdministrator/",
   getUpdateAdministrator
 );
+
 administratorRouter.get(
   "/api/student/getVisualiseAdministrator/:id",
   getVisualiseAdministrator
 );
 module.exports = administratorRouter;
+
+
+
+

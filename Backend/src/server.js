@@ -6,7 +6,12 @@ const bookRouter = require ("./routes/book.routes.js");
 const bookingRouter =require("./routes/booking.routes.js");
 const favoriteRouter = require("./routes/favorite.routes.js")
 const { routesAdministrator } = require("./LoadData/administrator.load.js");
-//const loadData = require("./setter/loadData.js");
+const { routesStudent } = require("./LoadData/student.load.js");
+const { routesBooking } = require("./LoadData/booking.load.js");
+const { routesFavorite } = require("./LoadData/favorite.load.js");
+
+
+const loadData = require("./setter/loadData.js");
 const server = () =>{
   const app = express();
   app.use(servConfig);
@@ -17,6 +22,9 @@ const server = () =>{
   app.use(favoriteRouter);
 
   app.use(routesAdministrator);
+  app.use(routesStudent);
+  app.use(routesBooking);
+  app.use(routesFavorite);
 
   const run = (port) => {
     app.listen(port);
@@ -24,11 +32,11 @@ const server = () =>{
   const { db } = require("./db");
   db.sequelize
     .sync({ force: false })
-    /*
+    
     .then(() =>{
         loadData();
       })
-    */
+    
     .catch((err) => {
       console.log("Failed to sync db: " + err.message);
     });

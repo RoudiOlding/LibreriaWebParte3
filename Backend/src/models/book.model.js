@@ -1,5 +1,3 @@
-const { INTEGER } = require("sequelize");
-
 module.exports = (sequelize, Sequelize) => {
     const Book = sequelize.define("Book", {
       id: {
@@ -7,7 +5,7 @@ module.exports = (sequelize, Sequelize) => {
         autoIncrement: true,
         primaryKey: true,
       },
-      titulo:{
+      title:{
         type: Sequelize.STRING,
       },
       qualification: {
@@ -23,8 +21,7 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.STRING,
       },
       anio: {
-        type: Sequelize.DATE,
-        allowNull: false,
+        type: Sequelize.INTEGER,
       },
       language: {
         type: Sequelize.STRING,
@@ -49,7 +46,9 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.INTEGER,
       },
       ReturnDate: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.DATE,
+        allowNull: true,
+
       },
     });
   

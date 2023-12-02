@@ -16,7 +16,7 @@ const getRegisterBookService = async (body) =>{
             availability:body.availability,
             title:body.title,
             cont:body.cont,
-            ReturnDate:body.ReturnDate,
+            ReturnDate: body.ReturnDate,
         });
         return book;
     }catch(e){

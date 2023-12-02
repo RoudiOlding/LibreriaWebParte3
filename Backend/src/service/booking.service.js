@@ -2,8 +2,13 @@ const { Models } = require("../db.js");
 
 const createBookingService = async(body)=>{
     try {
-        const newbooking = await Models.Booking.create(body);
-        return newbooking
+        const booking = await Models.Booking.create({
+            StudentId: booking.StudentId,
+            BookId: booking.BookId,
+            startDate: new Date(),
+            endDate: new Date(),
+        });
+            return booking;
     } catch (error) {
         throw Error("Error while creating Booking"+ error);
     }
