@@ -2,7 +2,15 @@ const dbConfig = require("./config/db.config.js");
 const Sequelize = require("sequelize");
 const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
   host: dbConfig.HOST,
+  port: dbConfig.DBPORT,
   dialect: dbConfig.DIALECT,
+  operatorsAliases: false,
+  pool: {
+    max: 1000,
+    min: 0,
+    acquire: 20000,
+    idle: 5000,
+  }
 });
 
 const db = {};

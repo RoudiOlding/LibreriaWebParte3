@@ -1,7 +1,8 @@
 module.exports = {
-    HOST: "localhost",
-    USER: "postgres",
-    PASSWORD: "1234", 
+    HOST: "grupo01prograweb202302.postgres.database.azure.com",
+    USER: "postgre",
+    PASSWORD: "oLDING12", 
     DB: "prueba4",
+    DBPORT: 5432,
     DIALECT: "postgres",
   };

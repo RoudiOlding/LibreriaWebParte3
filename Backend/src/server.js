@@ -26,8 +26,11 @@ const server = () =>{
   app.use(routesBooking);
   app.use(routesFavorite);
 
+  const port = process.env.PORT || 3001
+
   const run = (port) => {
     app.listen(port);
+    console.log('Servidor iniciado. Escuchando en puerto' + port)
   };
   const { db } = require("./db");
   db.sequelize
