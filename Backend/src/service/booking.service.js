@@ -1,5 +1,14 @@
 const { Models } = require("../db.js");
 
+const createBookingService = async(body)=>{
+    try {
+        const newbooking = await Models.Booking.create(body);
+        return newbooking
+    } catch (error) {
+        throw Error("Error while creating Booking"+ error);
+    }
+}
+
 const getVisualizeBookingService = async(StudentId) =>{
     try{
         const booking = await Models.Booking.findAll({
@@ -50,4 +59,5 @@ module.exports ={
     getUpdateBookingService,
     getVisualizeBookingService,
     getLastBookingsService,
+    createBookingService
 }
