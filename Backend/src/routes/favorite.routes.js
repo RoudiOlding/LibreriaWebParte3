@@ -16,7 +16,7 @@ favoriteRouter.delete(
 )
 
 favoriteRouter.post(
-    "/api/student/createFavorite",
+    "/api/student/createFavorite/",
     control.createFavorite
 )
 

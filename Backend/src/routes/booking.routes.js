@@ -25,7 +25,7 @@ bookingRouter.get(
 )
 
 bookingRouter.post(
-    "/api/student/createBooking",
+    "/api/student/createBooking/",
     createBooking
 )
 module.exports= bookingRouter;

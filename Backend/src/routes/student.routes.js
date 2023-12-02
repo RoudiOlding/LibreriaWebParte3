@@ -12,7 +12,7 @@ studentRouter.post(
   getRegisterStudent
 );
 studentRouter.put(
-  "/api/student/getUpdateStudent",
+  "/api/student/getUpdateStudent/",
   getUpdateStudent
 );
 studentRouter.get(

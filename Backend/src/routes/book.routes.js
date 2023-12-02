@@ -23,7 +23,7 @@ bookRouter.get(
     getBookAtribute
 )
 bookRouter.put(
-    '/api/student/updateBookAtributes',
+    '/api/student/updateBookAtributes/',
     updateBookAtributes
 )
 bookRouter.put(

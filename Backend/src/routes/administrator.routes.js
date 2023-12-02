@@ -12,7 +12,7 @@ administratorRouter.post(
   getRegisterAdministrator
 );
 administratorRouter.put(
-  "/api/student/getUpdateAdministrator",
+  "/api/student/getUpdateAdministrator/",
   getUpdateAdministrator
 );
 administratorRouter.get(

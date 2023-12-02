@@ -1,7 +1,6 @@
 const { registerBookService } = require("../service/book.service");
 const {createBooking} = require("../service/booking.service")
 const {createFavoriteService} = require("../service/favorite.service");
-const favoritos = require("./favoriteData");
 async function seedBook() {
     try {
       const books = require("./bookData");
@@ -63,7 +62,7 @@ async function seedBooking(){
         const body ={
           id:id,
           StudentId : favoritos.StudentId,
-          BookingId: favoritos.StudentId,
+          BookId: favoritos.BookId,
         };
         createFavoriteService(body).then((result)=>{
           console.log("Data insertada",result);
