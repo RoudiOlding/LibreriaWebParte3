@@ -31,7 +31,7 @@ bookRouter.put(
     updateStatusBooking
 )
 bookRouter.get(
-    '/api/student/getMostRequestedBoks',
+    '/api/student/getMostRequestedBooks',
     getMostRequestedBooks
 )
 
