@@ -18,7 +18,7 @@ const getUpdateBookingService = async(body) =>{
         const booking = await Models.Booking.findOne({
             
             where:{
-                id:BookingId,
+                id:body.id,
             },
         });
         await booking.update({

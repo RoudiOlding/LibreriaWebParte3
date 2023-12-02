@@ -14,7 +14,7 @@ bookingRouter.get(
 )
 
 bookingRouter.post(
-    "/api/student/updateBooking/:id",
+    "/api/student/updateBooking",
     updateBooking
 )
 
