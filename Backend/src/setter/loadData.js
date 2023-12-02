@@ -1,5 +1,7 @@
 const { registerBookService } = require("../service/book.service");
-
+const {createBooking} = require("../service/booking.service")
+const {createFavoriteService} = require("../service/favorite.service");
+const favoritos = require("./favoriteData");
 async function seedBook() {
     try {
       const books = require("./bookData");
@@ -32,9 +34,50 @@ async function seedBook() {
       console.log("error on seedBook");
     }
   }
+async function seedBooking(){
+    try {
+      const booking = require ("./bookigData")
+
+      booking.map((Booking,id)=>{
+        const body ={
+          id:id,
+          StudentId: Booking.StudentId,
+          BookingId: Booking.BookingId,
+          startDate: Booking.startDate,
+          endDate: Booking.endDate
+        };
+        createBooking(body).then((result)=>{
+          console.log("Data insertada:",result);
+        }).catch((error)=>{});
+      });
+      console.log("Prestamos agregados exitosamente")
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  async function seedFavorites(){
+    try {
+      const favorite =require("./favoriteData")
+
+      favorite.map((favoritos,id)=>{
+        const body ={
+          id:id,
+          StudentId : favoritos.StudentId,
+          BookingId: favoritos.StudentId,
+        };
+        createFavoriteService(body).then((result)=>{
+          console.log("Data insertada",result);
+        }).catch((error)=>{});
+      });
+    } catch (error) {
+      console.log(error)
+    }
+  }
   const loadData = async () => {
     const seeders = [
         seedBook,
+        seedBooking,
+        seedFavorites
     ];
   
     for (let seed of seeders) {
