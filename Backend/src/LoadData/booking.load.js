@@ -1,5 +1,6 @@
 const { Models } = require("../db.js");
-const routesBooking = require("express").Router();
+const { Router } = require("express");
+const routesBooking = Router();
 
 routesBooking.get("/booking", async (req, res) => {
     try {
