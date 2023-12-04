@@ -1,5 +1,6 @@
 const { Models } = require("../db.js");
 
+<<<<<<< HEAD
 const getRegisterAdministratorService = async (body) =>{
     try{
         const administrator = await Models.Administrator.create({
@@ -56,4 +57,17 @@ module.exports ={
     getUpdateAdministratorService,
     getVisualiseAdministratorService,
 };
+=======
+//Todo lo que hace el administrador
+
+/*
+    Acciones & Atributos:
+        1. Agregar libros
+            a. Todos los atributos de un libro puede agregar
+        2. Buscar libros:
+            a. Por nombre unicamente
+        3. Modificar su cuenta:
+            a. Nombres, Tipo de documento, apellido, nro de documento, correo, contraseña, idioma, prefijo, color
+*/
+>>>>>>> c586d38d4dc142745bbc6feca14bbe92acf72131
 
